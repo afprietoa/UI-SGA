@@ -1,0 +1,50 @@
+<h2 mat-dialog-title>Register Resource</h2>
+<mat-dialog-content>
+    <form [formGroup]="registerForm" (submit)="onSubmit()">
+        <mat-form-field class="form-field-row">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" placeholder="Name">
+            <mat-error *ngIf="registerForm.controls['name'].errors?.['required']">Campo requerido</mat-error>
+            <mat-error *ngIf="registerForm.controls['name'].errors?.['minlength']">Debe tener al menos 3 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['name'].errors?.['maxlength']">Debe tener menos de 30 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['name'].errors?.['pattern']">Solo se aceptan letras</mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-field-row">
+            <mat-label>Type</mat-label>
+            <input matInput formControlName="type" placeholder="Type">
+            <mat-error *ngIf="registerForm.controls['type'].errors?.['required']">Campo requerido</mat-error>
+            <mat-error *ngIf="registerForm.controls['type'].errors?.['minlength']">Debe tener al menos 3 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['type'].errors?.['maxlength']">Debe tener menos de 30 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['type'].errors?.['pattern']">Solo se aceptan letras</mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-field-row">
+            <mat-label>Latitude</mat-label>
+            <input matInput formControlName="latitude" placeholder="Latitude">
+            <mat-error *ngIf="registerForm.controls['latitude'].errors?.['required']">Campo requerido</mat-error>
+            <mat-error *ngIf="registerForm.controls['latitude'].errors?.['minlength']">Debe tener al menos 10 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['latitude'].errors?.['maxlength']">Debe tener menos de 13 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['latitude'].errors?.['pattern']">Solo se aceptan números</mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-field-row">
+            <mat-label>Longitude</mat-label>
+            <input matInput formControlName="longitude" placeholder="Longitude">
+            <mat-error *ngIf="registerForm.controls['longitude'].errors?.['required']">Campo requerido</mat-error>
+            <mat-error *ngIf="registerForm.controls['longitude'].errors?.['minlength']">Debe tener al menos 10 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['longitude'].errors?.['maxlength']">Debe tener menos de 13 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['longitude'].errors?.['pattern']">Solo se aceptan números</mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-field-row">
+            <mat-label>Location</mat-label>
+            <input matInput formControlName="location" placeholder="Location">
+            <mat-error *ngIf="registerForm.controls['location'].errors?.['required']">Campo requerido</mat-error>
+            <mat-error *ngIf="registerForm.controls['location'].errors?.['minlength']">Debe tener al menos 3 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['location'].errors?.['maxlength']">Debe tener menos de 30 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['location'].errors?.['pattern']">Solo se aceptan letras</mat-error>
+        </mat-form-field>
+
+        <mat-dialog-actions>
+            <button mat-button mat-dialog-close color="warn">Close</button>
+            <button mat-raised-button color="primary" type="submit">Save</button>
+        </mat-dialog-actions>
+    </form>
+</mat-dialog-content>

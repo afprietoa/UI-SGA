@@ -1,0 +1,29 @@
+<h2 mat-dialog-title>Edit Event</h2>
+<form [formGroup]="editForm" (submit)="onSubmit()">
+    <mat-dialog-content>
+        <mat-form-field class="form-field-row">
+            <mat-label>Date</mat-label>
+            <input matInput formControlName="date" placeholder="date">
+        </mat-form-field>
+        <mat-form-field class="form-field-row">
+            <mat-label>level</mat-label>
+            <input matInput formControlName="level" placeholder="level">
+        </mat-form-field>
+        <mat-form-field class="form-field-row">
+            <mat-label>Message</mat-label>
+            <input matInput formControlName="message" placeholder="message">
+        </mat-form-field>
+        <mat-form-field class="form-field-row">
+            <mat-label>User Id</mat-label>
+            <input matInput formControlName="userId" placeholder="userId">
+        </mat-form-field>
+        <mat-form-field class="form-field-row">
+            <mat-label>Event Id</mat-label>
+            <input matInput formControlName="eventId" placeholder="eventId">
+        </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-raised-button mat-dialog-close="">Close</button>
+        <button mat-raised-button color="primary" type="submit" [disabled]="editForm.invalid">Save</button>
+    </mat-dialog-actions>
+</form>

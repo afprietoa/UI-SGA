@@ -1,0 +1,62 @@
+<div class="container-text">
+    <h1>Challenges to Effective <br><span data-shadow-text="Text-Shadow">Management Events</span><br> Strategic Implementation of Integrated Water Resource</h1>
+</div>
+
+<div class="div_botones">
+    <button mat-raised-button color="primary" (click)="openDialogRegister()">Register Contaminant Event</button>
+</div>
+<div class="div_tabla">
+    <mat-form-field appearance="standard" class="w-full mb-4">
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Filter by any field...">
+    </mat-form-field>
+
+<table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let event">{{event.eventId}}</td>
+    </ng-container>
+    <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef>Description</th>
+        <td mat-cell *matCellDef="let event">{{event.description}}</td>
+    </ng-container>
+    <ng-container matColumnDef="magnitude">
+        <th mat-header-cell *matHeaderCellDef>Magnitude</th>
+        <td mat-cell *matCellDef="let event">{{event.magnitude}}</td>
+    </ng-container>
+    <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef>Date</th>
+        <td mat-cell *matCellDef="let event">{{event.date}}</td>
+    </ng-container>
+    <ng-container matColumnDef="pollutant">
+        <th mat-header-cell *matHeaderCellDef>Pollutant</th>
+        <td mat-cell *matCellDef="let event">{{event.pollutant.name}}</td>
+    </ng-container>
+    <ng-container matColumnDef="resource">
+        <th mat-header-cell *matHeaderCellDef>Resource</th>
+        <td mat-cell *matCellDef="let event">{{event.resource.name}}</td>
+    </ng-container>
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let event">
+            <button mat-icon-button matTooltip="View event" (click)="retrieveEvent(event.eventId)">
+                <mat-icon fontIcon ="visibility" style="color: blue;"> 
+                </mat-icon>
+            </button>
+            <button mat-icon-button matTooltip="Edit event"  (click)="openDialogEdit(event.eventId)">
+                <mat-icon fontIcon ="edit" style="color: chocolate;">            
+                </mat-icon>
+            </button>
+            <button mat-icon-button matTooltip="Delete event" (click)="destroyEvent(event.eventId)">
+                <mat-icon fontIcon ="person_remove" style="color: red;">  
+                </mat-icon>
+            </button>
+        </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+<mat-paginator [pageSizeOptions]="[5, 10, 20, 30, 50, 100]"
+showFirstLastButtons>
+</mat-paginator>
+</div>

@@ -1,0 +1,37 @@
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+
+
+
+@Component({
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
+})
+export class RegisterComponent{
+
+  form = this.formBuilder.nonNullable.group(
+    {
+      newPassword: ['', [Validators.minLength(6), Validators.required]],
+      confirmPassword: ['', [Validators.required]],
+    },
+    {
+    }
+  );
+  status: string = 'init';
+  faEye = faEye;
+  faEyeSlash = faEyeSlash;
+  showPassword = false;
+
+  constructor(private formBuilder: FormBuilder) {}
+
+  recovery() {
+    if (this.form.valid) {
+      // Todo
+    } else {
+      this.form.markAllAsTouched();
+    }
+  }
+
+}

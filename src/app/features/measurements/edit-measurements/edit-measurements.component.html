@@ -1,0 +1,33 @@
+<h2 mat-dialog-title>Edit Measurement</h2>
+<form [formGroup]="editForm" (submit)="onSubmit()">
+    <mat-dialog-content>
+        <mat-form-field class="form-field-row">
+            <mat-label>Date</mat-label>
+            <input matInput formControlName="date" placeholder="date">
+        </mat-form-field>
+        <mat-form-field class="form-field-row">
+            <mat-label>Ph</mat-label>
+            <input matInput formControlName="ph" placeholder="ph">
+        </mat-form-field>
+        <mat-form-field class="form-field-row">
+            <mat-label>Temperature</mat-label>
+            <input matInput formControlName="temperature" placeholder="temperature">
+        </mat-form-field>
+        <mat-form-field class="form-field-row">
+            <mat-label>User Id</mat-label>
+            <input matInput formControlName="userId" placeholder="userId">
+        </mat-form-field>
+        <mat-form-field class="form-field-row">
+            <mat-label>Pollutant Id</mat-label>
+            <input matInput formControlName="pollutantId" placeholder="pollutantId">
+        </mat-form-field>
+        <mat-form-field class="form-field-row">
+            <mat-label>Resource Id</mat-label>
+            <input matInput formControlName="resourceId" placeholder="resourceId">
+        </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-raised-button mat-dialog-close="">Close</button>
+        <button mat-raised-button color="primary" type="submit" [disabled]="editForm.invalid">Save</button>
+    </mat-dialog-actions>
+</form>

@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>Measurement Information</h2>
+<mat-dialog-content>
+<div *ngIf="measurementData" class="detail-info">
+    <p> Date: {{ measurementData.date }}</p>
+    <p> Ph: {{ measurementData.ph }}</p>
+    <p> Temperature: {{ measurementData.temperature }}</p>
+    <p> UserId: {{ measurementData.userId }}</p>
+    <p> Pollutant: {{ measurementData.pollutant.name }}</p>
+    <p> Resource: {{ measurementData.resource.name }}</p>
+</div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close="">Close</button>
+</mat-dialog-actions>

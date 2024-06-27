@@ -1,0 +1,26 @@
+<h2 mat-dialog-title>Register Pollutant</h2>
+<mat-dialog-content>
+    <form [formGroup]="registerForm" (submit)="onSubmit()">
+        <mat-form-field class="form-field-row">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" placeholder="Name">
+            <mat-error *ngIf="registerForm.controls['name'].errors?.['required']">Campo requerido</mat-error>
+            <mat-error *ngIf="registerForm.controls['name'].errors?.['minlength']">Debe tener al menos 3 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['name'].errors?.['maxlength']">Debe tener menos de 30 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['name'].errors?.['pattern']">Solo se aceptan letras</mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-field-row">
+            <mat-label>Load</mat-label>
+            <input matInput formControlName="load" placeholder="Load">
+            <mat-error *ngIf="registerForm.controls['load'].errors?.['required']">Campo requerido</mat-error>
+            <mat-error *ngIf="registerForm.controls['load'].errors?.['minlength']">Debe tener al menos 10 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['load'].errors?.['maxlength']">Debe tener menos de 13 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['load'].errors?.['pattern']">Solo se aceptan números</mat-error>
+        </mat-form-field>
+
+        <mat-dialog-actions>
+            <button mat-button mat-dialog-close color="warn">Close</button>
+            <button mat-raised-button color="primary" type="submit">Save</button>
+        </mat-dialog-actions>
+    </form>
+</mat-dialog-content>

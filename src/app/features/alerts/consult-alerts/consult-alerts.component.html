@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>Alert Information</h2>
+<mat-dialog-content>
+<div *ngIf="alertData" class="detail-info">
+    <p> Date: {{ alertData.date }}</p>
+    <p> level: {{ alertData.level }}</p>
+    <p> Message: {{ alertData.message }}</p>
+    <p> User Id: {{ alertData.userId.name }}</p>
+    <p> Event: {{ alertData.event.description }}</p>
+    <p> Resource: {{ alertData.resource.name }}</p>
+</div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close="">Close</button>
+</mat-dialog-actions>

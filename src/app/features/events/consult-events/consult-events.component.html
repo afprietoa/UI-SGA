@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>Event Information</h2>
+<mat-dialog-content>
+<div *ngIf="eventData" class="detail-info">
+    <p> Description: {{ eventData.description }}</p>
+    <p> Magnitude: {{ eventData.magnitude }}</p>
+    <p> Date: {{ eventData.date }}</p>
+    <p> Pollutant: {{ eventData.pollutant.name }}</p>
+    <p> Resource: {{ eventData.resource.name }}</p>
+</div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close="">Close</button>
+</mat-dialog-actions>

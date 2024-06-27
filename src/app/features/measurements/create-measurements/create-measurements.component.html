@@ -1,0 +1,59 @@
+<h2 mat-dialog-title>Register Measurement</h2>
+<mat-dialog-content>
+    <form [formGroup]="registerForm" (submit)="onSubmit()">
+        <mat-form-field class="form-field-row">
+            <mat-label>Date</mat-label>
+            <input matInput formControlName="date" placeholder="date">
+            <mat-error *ngIf="registerForm.controls['date'].errors?.['required']">Campo requerido</mat-error>
+            <mat-error *ngIf="registerForm.controls['date'].errors?.['minlength']">Debe tener al menos 3 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['date'].errors?.['maxlength']">Debe tener menos de 30 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['date'].errors?.['pattern']">Formato no valido</mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-field-row">
+            <mat-label>Ph</mat-label>
+            <input matInput formControlName="ph" placeholder="ph">
+            <mat-error *ngIf="registerForm.controls['ph'].errors?.['required']">Campo requerido</mat-error>
+            <mat-error *ngIf="registerForm.controls['ph'].errors?.['minlength']">Debe tener al menos 10 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['ph'].errors?.['maxlength']">Debe tener menos de 13 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['ph'].errors?.['pattern']">Solo se aceptan números</mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-field-row">
+            <mat-label>Temperature</mat-label>
+            <input matInput formControlName="temperature" placeholder="temperature">
+            <mat-error *ngIf="registerForm.controls['temperature'].errors?.['required']">Campo requerido</mat-error>
+            <mat-error *ngIf="registerForm.controls['temperature'].errors?.['minlength']">Debe tener al menos 10 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['temperature'].errors?.['maxlength']">Debe tener menos de 13 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['temperature'].errors?.['pattern']">Solo se aceptan números</mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-field-row">
+            <mat-label>User Id</mat-label>
+            <input matInput formControlName="userId" placeholder="userId">
+            <mat-error *ngIf="registerForm.controls['userId'].errors?.['required']">Campo requerido</mat-error>
+            <mat-error *ngIf="registerForm.controls['userId'].errors?.['minlength']">Debe tener al menos 10 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['userId'].errors?.['maxlength']">Debe tener menos de 13 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['userId'].errors?.['pattern']">Solo se aceptan números</mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-field-row">
+            <mat-label>Pollutant Id</mat-label>
+            <input matInput formControlName="pollutantId" placeholder="pollutantId">
+            <mat-error *ngIf="registerForm.controls['pollutantId'].errors?.['required']">Campo requerido</mat-error>
+            <mat-error *ngIf="registerForm.controls['pollutantId'].errors?.['minlength']">Debe tener al menos 10 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['pollutantId'].errors?.['maxlength']">Debe tener menos de 13 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['pollutantId'].errors?.['pattern']">Solo se aceptan números</mat-error>
+        </mat-form-field>
+        <mat-form-field class="form-field-row">
+            <mat-label>Resource Id</mat-label>
+            <input matInput formControlName="resourceId" placeholder="resourceId">
+            <mat-error *ngIf="registerForm.controls['resourceId'].errors?.['required']">Campo requerido</mat-error>
+            <mat-error *ngIf="registerForm.controls['resourceId'].errors?.['minlength']">Debe tener al menos 10 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['resourceId'].errors?.['maxlength']">Debe tener menos de 13 caracteres</mat-error>
+            <mat-error *ngIf="registerForm.controls['resourceId'].errors?.['pattern']">Solo se aceptan números</mat-error>
+        </mat-form-field>
+
+
+        <mat-dialog-actions>
+            <button mat-button mat-dialog-close color="warn">Close</button>
+            <button mat-raised-button color="primary" type="submit">Save</button>
+        </mat-dialog-actions>
+    </form>
+</mat-dialog-content>

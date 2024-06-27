@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>Resource Information</h2>
+<mat-dialog-content>
+<div *ngIf="resourceData" class="detail-info">
+    <p> Name: {{ resourceData.name }}</p>
+    <p> Type: {{ resourceData.type }}</p>
+    <p> Latitude: {{ resourceData.latitude }}</p>
+    <p> Longitude: {{ resourceData.longitude }}</p>
+    <p> Location: {{ resourceData.location }}</p>
+</div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close="">Close</button>
+</mat-dialog-actions>
