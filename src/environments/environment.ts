@@ -7,7 +7,8 @@ export const environment = {
   url_security: 'http://localhost:8080/',
   url_base: 'http://localhost:8081/',
   api_security: 'auth/',
-  api_base: 'api/'
+  api_base: 'api/',
+  mapbox_key: 'pk.eyJ1IjoiYWZwcmlldG9hIiwiYSI6ImNreGRxd3N4cjRyeDAybnFvcXo5aW1zYnUifQ.ZX6f-iR4YTAQpMM3_PWIeA',
 };
 
 /*

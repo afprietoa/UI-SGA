@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './features/home/home.component';
+import { MapComponent } from './shared/components/map/map.component';
 import { BoardComponent } from './shared/pages/board/board.component';
 import { BoardsComponent } from './shared/pages/boards/boards.component';
 import { LoginComponent } from './shared/pages/login/login.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'board', component:BoardComponent},
   {path: 'scroll', component:ScrollComponent},
   {path: 'table', component:TableComponent},
+  {path: 'map', component:MapComponent},
   {path: 'main', component:HomeComponent},
   {path: '', redirectTo: '/login', pathMatch: 'full'},
 ];

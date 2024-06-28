@@ -1,0 +1,17 @@
+<div id="map-mapbox"></div>
+<div class="controls">
+  <input type="text" #searchInput placeholder="Buscar ubicación" />
+  <button (click)="searchLocation()">Buscar</button>
+  <button (click)="returnToUserLocation()">Volver a mi ubicación</button>
+</div>
+
+<!-- Overlay de resultados de búsqueda -->
+<div *ngIf="searchResults.length > 0" class="search-overlay">
+  <ul>
+    <li *ngFor="let result of searchResults">
+      <strong>{{ result.text }}</strong><br>
+      {{ result.place_name }}
+      <button (click)="getDirections(result.center)">Direcciones</button>
+    </li>
+  </ul>
+</div>

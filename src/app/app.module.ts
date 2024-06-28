@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common'; 
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,6 +32,7 @@ import { EventsModule } from './features/events/events.module';
 import { AlertsModule } from './features/alerts/alerts.module';
 import { MeasurementsModule } from './features/measurements/measurements.module';
 import { PollutantsModule } from './features/pollutants/pollutants.module';
+import { MapComponent } from './shared/components/map/map.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,7 @@ import { PollutantsModule } from './features/pollutants/pollutants.module';
     ScrollComponent,
     TableComponent,
     RegisterComponent,
+    MapComponent,
   ],
   imports: [
     FeaturesModule,
@@ -52,6 +55,7 @@ import { PollutantsModule } from './features/pollutants/pollutants.module';
     HttpClientModule,
     ResourcesModule,
     EventsModule,
+    CommonModule,
     AlertsModule,
     MeasurementsModule,
     PollutantsModule,
