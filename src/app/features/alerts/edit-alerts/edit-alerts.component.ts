@@ -36,7 +36,7 @@ export class EditAlertsComponent implements OnInit {
           level:[alertData.level, Validators.required],
           message:[alertData.message, Validators.required],
           userId:[alertData.userId, Validators.required],
-          eventId:[alertData.eventId, Validators.required],
+          eventId:[alertData.event.eventId, Validators.required],
         })
       },
       error: (error: any) =>{
@@ -50,7 +50,7 @@ export class EditAlertsComponent implements OnInit {
     if(this.editForm.valid) {
       const alert = {
         alertId: alertId,
-        date: Number(this.editForm.value.date),
+        date: this.editForm.value.date,
         level: this.editForm.value.level,
         message: this.editForm.value.message,
         userId: Number(this.editForm.value.userId),

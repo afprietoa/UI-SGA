@@ -113,10 +113,12 @@ export class ListMeasurementsComponent implements OnInit, AfterViewInit {
     });
   }
   destroyMeasurement(measurement: number) {
+    console.log(measurement)
     const dialogRefInh = this.dialog.open(DisableMeasurementsComponent,{
       width: '500px',
      //height: '600px'
      data:{measurement:measurement}
+
     });
     dialogRefInh.afterClosed().subscribe(result => {
       

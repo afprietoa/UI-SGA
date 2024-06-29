@@ -118,11 +118,12 @@ export class ListResourcesComponent implements OnInit, AfterViewInit {
       
     });
   }
-  destroyResource(event: number) {
+  destroyResource(resource: number) {
+    console.log(resource)
     const dialogRefInh = this.dialog.open(DisableResourcesComponent,{
       width: '500px',
      //height: '600px'
-     data:{event:event}
+     data:{resource:resource}
     });
     dialogRefInh.afterClosed().subscribe(result => {
       

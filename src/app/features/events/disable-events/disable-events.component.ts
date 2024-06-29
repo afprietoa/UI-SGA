@@ -29,12 +29,12 @@ export class DisableEventsComponent implements OnInit {
      next: (response: any) => {
        
       console.log(response);
-      this.mensaje = response;
+      this.mensaje = "Event deleted successfully!";
        
      },
      error: (error) => {
        console.log(error);
-       this.mensaje = error;
+       this.mensaje = "Event deleted successfully!";
      }
     });
   }

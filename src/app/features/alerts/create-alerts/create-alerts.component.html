@@ -1,8 +1,8 @@
-<h2 mat-dialog-title>Register Resource</h2>
+<h2 mat-dialog-title>Register Alert</h2>
 <mat-dialog-content>
     <form [formGroup]="registerForm" (submit)="onSubmit()">
         <mat-form-field class="form-field-row">
-            <mat-form-field class="form-field-row">
+            
                 <mat-label>Date</mat-label>
                 <input matInput formControlName="date" placeholder="date">
                 <mat-error *ngIf="registerForm.controls['date'].errors?.['required']">Campo requerido</mat-error>
@@ -10,6 +10,7 @@
                 <mat-error *ngIf="registerForm.controls['date'].errors?.['maxlength']">Debe tener menos de 30 caracteres</mat-error>
                 <mat-error *ngIf="registerForm.controls['date'].errors?.['pattern']">El formato no es valido</mat-error>
             </mat-form-field>
+            <mat-form-field class="form-field-row">
             <mat-label>Level</mat-label>
             <input matInput formControlName="level" placeholder="level">
             <mat-error *ngIf="registerForm.controls['level'].errors?.['required']">Campo requerido</mat-error>

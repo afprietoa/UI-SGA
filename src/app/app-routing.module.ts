@@ -12,7 +12,7 @@ import { TableComponent } from './shared/pages/table/table.component';
 const routes: Routes = [
   {path: 'login', component:LoginComponent},
   {path: 'register', component:RegisterComponent},
-  {path: 'boards', component:BoardsComponent},
+  {path: 'home', component:BoardsComponent},
   {path: 'board', component:BoardComponent},
   {path: 'scroll', component:ScrollComponent},
   {path: 'table', component:TableComponent},

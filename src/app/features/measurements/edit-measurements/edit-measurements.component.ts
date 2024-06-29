@@ -34,10 +34,11 @@ export class EditMeasurementsComponent implements OnInit {
         const measurementData = response;
         this.editForm = this.fb.group({
           date:[measurementData.date, Validators.required],
+          ph:[measurementData.ph, Validators.required],
           temperature:[measurementData.temperature, Validators.required],
           userId:[measurementData.userId, Validators.required],
-          pollutantId:[measurementData.pollutantId, Validators.required],
-          resourceId:[measurementData.resourceId, Validators.required],
+          pollutantId:[measurementData.pollutant.pollutantId, Validators.required],
+          resourceId:[measurementData.resource.resourceId, Validators.required],
         })
       },
       error: (error: any) =>{
@@ -54,9 +55,9 @@ export class EditMeasurementsComponent implements OnInit {
         date: this.editForm.value.date,
         ph: Number(this.editForm.value.ph),
         temperature: Number(this.editForm.value.temperature),
-        userId: this.editForm.value.userId,
-        pollutantId: this.editForm.value.pollutantId,
-        resourceId: this.editForm.value.resourceId
+        userId: Number(this.editForm.value.userId),
+        pollutantId: Number(this.editForm.value.pollutantId),
+        resourceId: Number(this.editForm.value.resourceId)
       }
 
       this.measurementService. patchMeasurement(measurement).subscribe({

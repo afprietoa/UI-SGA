@@ -21,19 +21,20 @@ export class DisableResourcesComponent implements OnInit {
   ngOnInit(): void {
     const id = this.data.resource;
 
-
+    console.log(id)
 
     
    this.resourceService.deleteResource(id).subscribe({
      next: (response: any) => {
        
       console.log(response);
-      this.mensaje = response;
+      this.mensaje = "Resource deleted successfully!";
        
      },
      error: (error) => {
        console.log(error);
-       this.mensaje = error;
+       this.mensaje = error.message;
+       ;
      }
     });
   }

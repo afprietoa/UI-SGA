@@ -21,11 +21,11 @@ export class CreateEventsComponent implements OnInit {
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({
-      description:['', [Validators.required, Validators.minLength(3), Validators.maxLength(30), Validators.pattern('^[a-zA-Z ]*$')]],
-      magnitude:['', [Validators.required, Validators.minLength(3), Validators.maxLength(30), Validators.pattern('^[a-zA-Z ]*$')]],
-      date:['', [Validators.required, Validators.minLength(3), Validators.maxLength(30), Validators.pattern(/^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/)]],
-      pollutantId:['', [Validators.required, Validators.minLength(10), Validators.maxLength(13), Validators.pattern('^[0-9]*$')]],
-      resourceId:['', [Validators.required, Validators.minLength(10), Validators.maxLength(13), Validators.pattern('^[0-9]*$')]],
+      description:['', [Validators.required]],
+      magnitude:['', [Validators.required]],
+      date:['', [Validators.required]],
+      pollutantId:['', [Validators.required]],
+      resourceId:['', [Validators.required]],
     });
   }
 

@@ -113,6 +113,7 @@ export class ListEventsComponent implements OnInit, AfterViewInit {
     });
   }
   destroyEvent(event: number) {
+    console.log(event)
     const dialogRefInh = this.dialog.open(DisableEventsComponent,{
       width: '500px',
      //height: '600px'

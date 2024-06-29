@@ -35,8 +35,8 @@ export class EditEventsComponent implements OnInit {
           description:[eventData.description, Validators.required],
           magnitude:[eventData.magnitude, Validators.required],
           date:[eventData.date, Validators.required],
-          pollutantId:[eventData.pollutantId, Validators.required],
-          resourceId:[eventData.resourceId, Validators.required],
+          pollutantId:[eventData.pollutant.pollutantId, Validators.required],
+          resourceId:[eventData.resource.resourceId, Validators.required],
         })
       },
       error: (error: any) =>{
@@ -52,9 +52,9 @@ export class EditEventsComponent implements OnInit {
         eventId: eventId,
         description: this.editForm.value.description,
         magnitude: this.editForm.value.magnitude,
-        date: Number(this.editForm.value.date),
+        date: this.editForm.value.date,
         pollutantId: Number(this.editForm.value.pollutantId),
-        resourceId: this.editForm.value.resourceId,
+        resourceId: Number(this.editForm.value.resourceId),
       }
 
       this.eventService. patchEvent(event).subscribe({

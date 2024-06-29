@@ -20,12 +20,12 @@ export class CreateMeasurementsComponent implements OnInit {
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({
-      date:['', [Validators.required, Validators.minLength(3), Validators.maxLength(30), Validators.pattern(/^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/)]],
-      ph:['', [Validators.required, Validators.minLength(10), Validators.maxLength(13), Validators.pattern('^[0-9]*$')]],
-      temperature:['', [Validators.required, Validators.minLength(10), Validators.maxLength(13), Validators.pattern('^[0-9]*$')]],
-      userId:['', [Validators.required, Validators.minLength(10), Validators.maxLength(13), Validators.pattern('^[0-9]*$')]],
-      pollutantId:['', [Validators.required, Validators.minLength(10), Validators.maxLength(13), Validators.pattern('^[0-9]*$')]],
-      resourceId:['', [Validators.required, Validators.minLength(10), Validators.maxLength(13), Validators.pattern('^[0-9]*$')]],
+      date:['', [Validators.required]],
+      ph:['', [Validators.required]],
+      temperature:['', [Validators.required]],
+      userId:['', [Validators.required]],
+      pollutantId:['', [Validators.required]],
+      resourceId:['', [Validators.required]],
     });
   }
 
@@ -40,7 +40,7 @@ export class CreateMeasurementsComponent implements OnInit {
         date: this.registerForm.value.date,
         ph: Number(this.registerForm.value.ph),
         temperature: Number(this.registerForm.value.temperature),
-        userId: Number(this.registerForm.value.userId),
+        userId: Number(this.registerForm.value.userIdD),
         pollutantId: Number(this.registerForm.value.pollutantId),
         resourceId: Number(this.registerForm.value.resourceId),
       }

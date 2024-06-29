@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DialogModule } from '@angular/cdk/dialog';
 import { RouterModule } from '@angular/router';
 import { CdkTableModule } from '@angular/cdk/table'
@@ -19,7 +19,7 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TodoDialogComponent } from './shared/components/todo-dialog/todo-dialog.component';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import {MatButtonModule} from "@angular/material/button";
 import { FeaturesModule } from './features/features.module';
 import { LoginComponent } from './shared/pages/login/login.component';
 import { BoardsComponent } from './shared/pages/boards/boards.component';
@@ -33,6 +33,10 @@ import { AlertsModule } from './features/alerts/alerts.module';
 import { MeasurementsModule } from './features/measurements/measurements.module';
 import { PollutantsModule } from './features/pollutants/pollutants.module';
 import { MapComponent } from './shared/components/map/map.component';
+import {MatIconModule} from "@angular/material/icon";
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -49,6 +53,10 @@ import { MapComponent } from './shared/components/map/map.component';
     MapComponent,
   ],
   imports: [
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
     FeaturesModule,
     BrowserModule,
     AppRoutingModule,
@@ -60,7 +68,6 @@ import { MapComponent } from './shared/components/map/map.component';
     MeasurementsModule,
     PollutantsModule,
     OverlayModule,
-    FormsModule,
     HttpClientModule,
     CdkAccordionModule,
     DragDropModule,
@@ -70,7 +77,8 @@ import { MapComponent } from './shared/components/map/map.component';
     HttpClientModule,
     ScrollingModule,
     CdkTableModule,
-    ReactiveFormsModule
+    MatButtonModule,
+    MatIconModule
   ],
   exports:[
     RouterModule,

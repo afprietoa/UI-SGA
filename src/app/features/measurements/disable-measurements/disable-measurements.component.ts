@@ -27,7 +27,7 @@ export class DisableMeasurementsComponent implements OnInit {
      next: (response: any) => {
        
       console.log(response);
-      this.mensaje = response;
+      this.mensaje = "Measurement deleted successfully!";
        
      },
      error: (error) => {

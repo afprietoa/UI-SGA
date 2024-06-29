@@ -4,35 +4,6 @@
 
       <div class="grid grid-cols-2 gap-4">
 
-        <div class="w-1/2">
-          <h1 class="text-sky-600">Alerta Resources</h1>
-          <div class="h-64 w-full border overflow-y-scroll bg-white rounded mt-2">
-            <div class="flex items-center space-x-4" *ngFor="let resource of resources">
-              <img class="w-10 h-10 rounded-full" src="https://picsum.photos/400/500?random=1&category=water" alt="">
-              <div class="space-y-1 font-medium dark:text-white">
-                  <div class="font-bold text-gray-500 dark:text-gray-400">{{ resource.name }}</div>
-                  <div class="text-sm text-gray-500 dark:text-gray-400">{{resource.location}}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="w-1/2">
-          <h1 class="text-sky-600">No Alert Resources</h1>
-          <cdk-virtual-scroll-viewport itemSize="50" class="h-64 w-full border overflow-y-scroll bg-white rounded mt-2">
-            <div class="flex items-center space-x-4" *cdkVirtualFor="let resource of resources">
-              <img class="w-10 h-10 rounded-full" src="https://picsum.photos/400/500?random=resourceId&category=water" alt="">
-              <div class="space-y-1 font-medium dark:text-white">
-                  <div class="font-bold text-gray-500 dark:text-gray-400">{{ resource.name }}</div>
-                  <div class="text-sm text-gray-500 dark:text-gray-400">{{resource.location}}</div>
-              </div>
-            </div>
-          </cdk-virtual-scroll-viewport>
-        </div>
-
-
-
-
         <!-- <div class="w-1/2">
           <h1 class="text-sky-600">Alerta Resources</h1>
           <div class="h-64 w-full border overflow-y-scroll bg-white rounded mt-2">
@@ -44,10 +15,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="w-1/2">
-          <h1 class="text-sky-600">No Alert Resources</h1>
+          <h1 class="text-sky-600">Minor Magnitude</h1>
           <cdk-virtual-scroll-viewport itemSize="50" class="h-64 w-full border overflow-y-scroll bg-white rounded mt-2">
             <div class="flex items-center space-x-4" *cdkVirtualFor="let resource of resources">
               <img class="w-10 h-10 rounded-full" src="https://picsum.photos/400/500?random=resourceId&category=water" alt="">
@@ -57,7 +28,47 @@
               </div>
             </div>
           </cdk-virtual-scroll-viewport>
-        </div> -->
+        </div>
+
+        <div class="w-1/2">
+          <h1 class="text-sky-600">Moderate Magnitude</h1>
+          <cdk-virtual-scroll-viewport itemSize="50" class="h-64 w-full border overflow-y-scroll bg-white rounded mt-2">
+            <div class="flex items-center space-x-4" *cdkVirtualFor="let resource of resources">
+              <img class="w-10 h-10 rounded-full" src="https://picsum.photos/400/500?random=resourceId&category=water" alt="">
+              <div class="space-y-1 font-medium dark:text-white">
+                  <div class="font-bold text-gray-500 dark:text-gray-400">{{ resource.name }}</div>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">{{resource.location}}</div>
+              </div>
+            </div>
+          </cdk-virtual-scroll-viewport>
+        </div>
+
+        <div class="w-1/2">
+          <h1 class="text-sky-600">Major Magnitude</h1>
+          <cdk-virtual-scroll-viewport itemSize="50" class="h-64 w-full border overflow-y-scroll bg-white rounded mt-2">
+            <div class="flex items-center space-x-4" *cdkVirtualFor="let resource of resources">
+              <img class="w-10 h-10 rounded-full" src="https://picsum.photos/400/500?random=resourceId&category=water" alt="">
+              <div class="space-y-1 font-medium dark:text-white">
+                  <div class="font-bold text-gray-500 dark:text-gray-400">{{ resource.name }}</div>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">{{resource.location}}</div>
+              </div>
+            </div>
+          </cdk-virtual-scroll-viewport>
+        </div>
+
+
+        <div class="w-1/2">
+          <h1 class="text-sky-600">Catastrophic Magnitude</h1>
+          <cdk-virtual-scroll-viewport itemSize="50" class="h-64 w-full border overflow-y-scroll bg-white rounded mt-2">
+            <div class="flex items-center space-x-4" *cdkVirtualFor="let resource of resources">
+              <img class="w-10 h-10 rounded-full" src="https://picsum.photos/400/500?random=resourceId&category=water" alt="">
+              <div class="space-y-1 font-medium dark:text-white">
+                  <div class="font-bold text-gray-500 dark:text-gray-400">{{ resource.name }}</div>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">{{resource.location}}</div>
+              </div>
+            </div>
+          </cdk-virtual-scroll-viewport>
+        </div>
 
       </div>
 

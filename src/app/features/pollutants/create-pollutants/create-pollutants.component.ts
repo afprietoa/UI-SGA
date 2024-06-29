@@ -20,8 +20,8 @@ export class CreatePollutantsComponent implements OnInit {
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({
-      name:['', [Validators.required, Validators.minLength(3), Validators.maxLength(30), Validators.pattern('^[a-zA-Z ]*$')]],
-      load:['', [Validators.required, Validators.minLength(10), Validators.maxLength(13), Validators.pattern('^[0-9]*$')]],
+      name:['', [Validators.required]],
+      load:['', [Validators.required]],
     });
   }
 

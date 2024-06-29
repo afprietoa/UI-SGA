@@ -19,11 +19,11 @@ export class CreateResourcesComponent implements OnInit {
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({
-      name:['', [Validators.required, Validators.minLength(3), Validators.maxLength(30), Validators.pattern('^[a-zA-Z ]*$')]],
-      type:['', [Validators.required, Validators.minLength(3), Validators.maxLength(30), Validators.pattern('^[a-zA-Z ]*$')]],
-      latitude:['', [Validators.required, Validators.minLength(10), Validators.maxLength(13), Validators.pattern('^[0-9]*$')]],
-      longitude:['', [Validators.required, Validators.minLength(10), Validators.maxLength(13), Validators.pattern('^[0-9]*$')]],
-      location:['', [Validators.required, Validators.minLength(3), Validators.maxLength(30), Validators.pattern('^[a-zA-Z ]*$')]],
+      name:['', [Validators.required ]],
+      type:['', [Validators.required ]],
+      latitude:['', [Validators.required]],
+      longitude:['', [Validators.required]],
+      location:['', [Validators.required ]],
     });
   }
 

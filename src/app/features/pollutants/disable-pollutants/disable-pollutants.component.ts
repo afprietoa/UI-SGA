@@ -27,7 +27,7 @@ export class DisablePollutantsComponent implements OnInit {
      next: (response: any) => {
        
       console.log(response);
-      this.mensaje = response;
+      this.mensaje = "Pollutant deleted successfully!";
        
      },
      error: (error) => {

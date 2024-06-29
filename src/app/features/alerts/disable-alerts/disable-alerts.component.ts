@@ -29,7 +29,7 @@ export class DisableAlertsComponent implements OnInit {
      next: (response: any) => {
        
       console.log(response);
-      this.mensaje = response;
+      this.mensaje = "Alert deleted successfully!";
        
      },
      error: (error) => {
